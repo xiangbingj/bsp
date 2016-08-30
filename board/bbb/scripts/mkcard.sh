@@ -12,7 +12,7 @@ fi
 DISK="$1"
 
 # Make sure SD card is not mounted
-umount "/dev/${DISK}*"
+umount "${DISK}*"
 
 # Erase SD card
 # Erasing a full card can be slow; only erase partially into last partition
