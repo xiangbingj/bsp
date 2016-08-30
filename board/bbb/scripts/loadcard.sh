@@ -18,7 +18,7 @@ DISK="$1"
 IMGDIR="$2"
 
 # Make sure SD card is not mounted
-umount "${DISK}*"
+umount "${DISK}"*
 
 # Copy boot files to boot partition
 mkdir mnt_boot || fail "Could not make mnt_boot"

@@ -12,11 +12,11 @@ fi
 DISK="$1"
 
 # Make sure SD card is not mounted
-umount "${DISK}*"
+umount "${DISK}"*
 
 # Erase SD card
 # Erasing a full card can be slow; only erase partially into last partition
-dd if=/dev/zero of="${DISK}" bs=32M count=400
+dd if=/dev/zero of="${DISK}" bs=40M count=10
 
 # AM335x can boot from SD via two methods:
 # 1. Raw Mode: booting image expected at one of four specific locations
